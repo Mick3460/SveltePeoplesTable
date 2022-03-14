@@ -12,7 +12,7 @@
             latestSort = target;
             people = people.sort(function(a,b){
                 if(a[target] < b[target]) return -1;
-                if(b[target] > a[target]) return 1;
+                if(b[target] < a[target]) return 1;
                 return 0;
                 })
         } else {
