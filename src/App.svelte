@@ -12,10 +12,9 @@ const makeRandomPeople = () => {
 	people = [...people, {avatar, name, email,age} ]
 	return {avatar, name, email,age} // for getting headers
 }
-
-makeRandomPeople()
-makeRandomPeople()
-makeRandomPeople()
+for (let i = 0; i <8; i++) {
+	makeRandomPeople();
+}
 
 const headers =  Object.keys(makeRandomPeople())
 
