@@ -6,14 +6,14 @@
     
     let latestSort = '' ;
     function sort(event){
-        const target =event.detail.header;
-        //console.log(target)
-        if(target !== latestSort){
+        const target = event.detail.header;
+        //console.log(typeof(target)) // it's a string, use it?
+        if(target !== latestSort){ // remember hard equality so Anders wont hit you
             latestSort = target;
             people = people.sort(function(a,b){
                 if(a[target] < b[target]) return -1;
-                if(b[target] < a[target]) return 1;
-                return 0;
+                else if(b[target] < a[target]) return 1;
+                else return 0;
                 })
         } else {
             people = people.reverse()
